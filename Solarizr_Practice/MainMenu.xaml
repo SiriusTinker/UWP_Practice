@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Solarizr_Practice.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Solarizr_Practice"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <SplitView x:Name="myFirstSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False"
+               CompactPaneLength="50" OpenPaneLength="150">
+        <SplitView.Pane>
+            <StackPanel Background="Gray">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Width" Value="50"/>
+                        <Setter Property="Height" Value="50"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button x:Name="HamburgerButton" 
+                        Content="&#xE700;"
+                        Click="HamburgerButton_Click"/>
+                <Button x:Name="Home" 
+                        Content="&#xE80F;"                        
+                        Click="Home_Click"/>
+                <Button x:Name="BulletedList"
+                        Content="&#xE8FD;"                         
+                        Click="BulletedList_Click"/>
+                <Button x:Name="MapPin"
+                        Content="&#xE707;"                         
+                        Click="MapPin_Click"/>
+                <Button x:Name="Calendar"
+                        Content="&#xE787;"                        
+                        Click="Calendar_Click"/>
+            </StackPanel>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Grid Background="Black">
+                <TextBlock Text="First SplitView" FontSize="54" Foreground="White"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </SplitView.Content>
+    </SplitView>
+</Page>
